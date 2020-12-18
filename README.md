@@ -12,3 +12,7 @@
 
 ### [Theory](https://github.com/Virtouoz/Microprocessor-tools-and-systems/tree/main/Theory) 
 ### [Options](https://github.com/Virtouoz/Microprocessor-tools-and-systems/tree/main/Options) 
+
+
+Laboratory work done in Code Composer Studio 10.1.1 on the MSP430F5529 board.
+Compiler version TI v20.2.1.LTS
