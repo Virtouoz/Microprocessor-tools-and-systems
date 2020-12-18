@@ -1,0 +1,277 @@
+******************************************************************************
+                  MSP430 Linker PC v20.2.1                     
+******************************************************************************
+>> Linked Fri Dec 18 17:19:28 2020
+
+OUTPUT FILE NAME:   <lab5.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00000598
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  MEM                   00000200   0000fdfd  00000532  0000f8cb  RWIX
+  RESET                 0000fffe   0000ffff  00000002  0000fffd  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    00000200    00000448     
+                  00000200    0000009e     main.obj (.text:CMA3000_init)
+                  0000029e    00000076     rts430x_lc_rd_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00000314    00000074     main.obj (.text:CMA3000_writeCommand)
+                  00000388    00000062     main.obj (.text:main)
+                  000003ea    0000005e     main.obj (.text:Dogs102x6_init)
+                  00000448    00000058     main.obj (.text:Dogs102x6_setAddress)
+                  000004a0    00000054     rts430x_lc_rd_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit_hold_wdt:__TI_auto_init_nobinit_nopinit_hold_wdt)
+                  000004f4    0000003c     main.obj (.text:Dogs102x6_clearScreen)
+                  00000530    00000034     main.obj (.text:Dogs102x6_writeCommand)
+                  00000564    00000034     main.obj (.text:Dogs102x6_writeData)
+                  00000598    0000001c     rts430x_lc_rd_eabi.lib : boot.c.obj (.text:_isr:_c_int00_noargs)
+                  000005b4    00000018     main.obj (.text:init_A1)
+                  000005cc    00000016     rts430x_lc_rd_eabi.lib : memset.c.obj (.text:memset)
+                  000005e2    00000014     main.obj (.text:Dogs102x6_backlightInit)
+                  000005f6    00000014     rts430x_lc_rd_eabi.lib : memcpy.c.obj (.text:memcpy)
+                  0000060a    00000012                            : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000061c    00000012     main.obj (.text:start_A1)
+                  0000062e    0000000e     main.obj (.text:stop_A1)
+                  0000063c    00000006     rts430x_lc_rd_eabi.lib : exit.c.obj (.text:abort)
+                  00000642    00000004                            : pre_init.c.obj (.text:_system_pre_init)
+                  00000646    00000002                            : startup.c.obj (.text:_system_post_cinit)
+
+.data      0    00000648    00000018     UNINITIALIZED
+                  00000648    00000010     main.obj (.data:Dogs102x6_initMacro)
+                  00000658    00000008     main.obj (.data)
+
+.const     0    00000660    00000002     
+                  00000660    00000002     main.obj (.const:.string:$P$T0$1)
+
+.cinit     0    00000704    00000030     
+                  00000704    0000001f     (.cinit..data.load) [load image, compression = lzss]
+                  00000723    00000001     --HOLE-- [fill = 0]
+                  00000724    00000008     (__TI_handler_table)
+                  0000072c    00000008     (__TI_cinit_table)
+
+.reset     0    0000fffe    00000002     
+                  0000fffe    00000002     rts430x_lc_rd_eabi.lib : boot.c.obj (.reset)
+
+.init_array 
+*          0    00000200    00000000     UNINITIALIZED
+
+.stack     0    00000664    000000a0     UNINITIALIZED
+                  00000664    00000004     rts430x_lc_rd_eabi.lib : boot.c.obj (.stack)
+                  00000668    0000009c     --HOLE--
+
+MODULE SUMMARY
+
+       Module                       code   ro data   rw data
+       ------                       ----   -------   -------
+    .\
+       main.obj                     794    2         24     
+    +--+----------------------------+------+---------+---------+
+       Total:                       794    2         24     
+                                                            
+    P:\CCS10\ccs\tools\compiler\ti-cgt-msp430_20.2.1.LTS\lib\rts430x_lc_rd_eabi.lib
+       copy_decompress_lzss.c.obj   118    0         0      
+       autoinit.c.obj               84     0         0      
+       boot.c.obj                   28     2         0      
+       memset.c.obj                 22     0         0      
+       memcpy.c.obj                 20     0         0      
+       copy_decompress_none.c.obj   18     0         0      
+       exit.c.obj                   6      0         0      
+       pre_init.c.obj               4      0         0      
+       startup.c.obj                2      0         0      
+    +--+----------------------------+------+---------+---------+
+       Total:                       302    2         0      
+                                                            
+       Stack:                       0      0         160    
+       Linker Generated:            0      47        0      
+    +--+----------------------------+------+---------+---------+
+       Grand Total:                 1096   51        184    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0000072c records: 1, size/record: 8, table size: 8
+	.data: load addr=00000704, load size=0000001f bytes, run addr=00000648, run size=00000018 bytes, compression=lzss
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00000724 records: 2, size/record: 4, table size: 8
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                   
+-------   ----                                   
+0000063c  C$$EXIT                                
+00000200  CMA3000_init                           
+00000314  CMA3000_writeCommand                   
+0000065e  COLUMN_START_ADDRESS                   
+00000658  CONVERT_TO_METERS                      
+000005e2  Dogs102x6_backlightInit                
+000004f4  Dogs102x6_clearScreen                  
+000003ea  Dogs102x6_init                         
+00000648  Dogs102x6_initMacro                    
+00000448  Dogs102x6_setAddress                   
+00000530  Dogs102x6_writeCommand                 
+00000564  Dogs102x6_writeData                    
+UNDEFED   PADIR_H                                
+UNDEFED   PADIR_L                                
+UNDEFED   PAIES_H                                
+UNDEFED   PAIE_H                                 
+UNDEFED   PAIFG_H                                
+UNDEFED   PAOUT_H                                
+UNDEFED   PAOUT_L                                
+UNDEFED   PAREN_H                                
+UNDEFED   PASEL_H                                
+UNDEFED   PBDIR_H                                
+UNDEFED   PBDIR_L                                
+UNDEFED   PBOUT_L                                
+UNDEFED   PBSEL_H                                
+UNDEFED   PBSEL_L                                
+UNDEFED   PCDIR_L                                
+UNDEFED   PCOUT_L                                
+UNDEFED   PDDIR_L                                
+UNDEFED   PDOUT_L                                
+UNDEFED   PDSEL_L                                
+UNDEFED   TA1CCR0                                
+UNDEFED   TA1CCTL0                               
+UNDEFED   TA1CTL                                 
+UNDEFED   UCA0BRW_H                              
+UNDEFED   UCA0BRW_L                              
+UNDEFED   UCA0CTLW0_H                            
+UNDEFED   UCA0CTLW0_L                            
+UNDEFED   UCA0RXBUF                              
+UNDEFED   UCA0TXBUF                              
+UNDEFED   UCB1BRW_H                              
+UNDEFED   UCB1BRW_L                              
+UNDEFED   UCB1CTLW0_H                            
+UNDEFED   UCB1CTLW0_L                            
+UNDEFED   UCB1ICTL_H                             
+UNDEFED   UCB1RXBUF                              
+UNDEFED   UCB1STAT                               
+UNDEFED   UCB1TXBUF                              
+UNDEFED   UCSCTL1                                
+UNDEFED   UCSCTL2                                
+UNDEFED   UCSCTL3                                
+UNDEFED   WDTCTL                                 
+00000704  __STACK_END                            
+000000a0  __STACK_SIZE                           
+0000072c  __TI_CINIT_Base                        
+00000734  __TI_CINIT_Limit                       
+00000724  __TI_Handler_Table_Base                
+0000072c  __TI_Handler_Table_Limit               
+000004a0  __TI_auto_init_nobinit_nopinit_hold_wdt
+0000029e  __TI_decompress_lzss                   
+0000060a  __TI_decompress_none                   
+ffffffff  __TI_pprof_out_hndl                    
+ffffffff  __TI_prof_data_size                    
+ffffffff  __TI_prof_data_start                   
+ffffffff  __c_args__                             
+00000598  _c_int00_noargs                        
+0000fffe  _reset_vector                          
+00000664  _stack                                 
+00000646  _system_post_cinit                     
+00000642  _system_pre_init                       
+0000063c  abort                                  
+000005b4  init_A1                                
+00000388  main                                   
+000005f6  memcpy                                 
+000005cc  memset                                 
+0000061c  start_A1                               
+0000062e  stop_A1                                
+0000065c  whatChecking                           
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                   
+-------   ----                                   
+000000a0  __STACK_SIZE                           
+00000200  CMA3000_init                           
+0000029e  __TI_decompress_lzss                   
+00000314  CMA3000_writeCommand                   
+00000388  main                                   
+000003ea  Dogs102x6_init                         
+00000448  Dogs102x6_setAddress                   
+000004a0  __TI_auto_init_nobinit_nopinit_hold_wdt
+000004f4  Dogs102x6_clearScreen                  
+00000530  Dogs102x6_writeCommand                 
+00000564  Dogs102x6_writeData                    
+00000598  _c_int00_noargs                        
+000005b4  init_A1                                
+000005cc  memset                                 
+000005e2  Dogs102x6_backlightInit                
+000005f6  memcpy                                 
+0000060a  __TI_decompress_none                   
+0000061c  start_A1                               
+0000062e  stop_A1                                
+0000063c  C$$EXIT                                
+0000063c  abort                                  
+00000642  _system_pre_init                       
+00000646  _system_post_cinit                     
+00000648  Dogs102x6_initMacro                    
+00000658  CONVERT_TO_METERS                      
+0000065c  whatChecking                           
+0000065e  COLUMN_START_ADDRESS                   
+00000664  _stack                                 
+00000704  __STACK_END                            
+00000724  __TI_Handler_Table_Base                
+0000072c  __TI_CINIT_Base                        
+0000072c  __TI_Handler_Table_Limit               
+00000734  __TI_CINIT_Limit                       
+0000fffe  _reset_vector                          
+ffffffff  __TI_pprof_out_hndl                    
+ffffffff  __TI_prof_data_size                    
+ffffffff  __TI_prof_data_start                   
+ffffffff  __c_args__                             
+UNDEFED   PADIR_H                                
+UNDEFED   PADIR_L                                
+UNDEFED   PAIES_H                                
+UNDEFED   PAIE_H                                 
+UNDEFED   PAIFG_H                                
+UNDEFED   PAOUT_H                                
+UNDEFED   PAOUT_L                                
+UNDEFED   PAREN_H                                
+UNDEFED   PASEL_H                                
+UNDEFED   PBDIR_H                                
+UNDEFED   PBDIR_L                                
+UNDEFED   PBOUT_L                                
+UNDEFED   PBSEL_H                                
+UNDEFED   PBSEL_L                                
+UNDEFED   PCDIR_L                                
+UNDEFED   PCOUT_L                                
+UNDEFED   PDDIR_L                                
+UNDEFED   PDOUT_L                                
+UNDEFED   PDSEL_L                                
+UNDEFED   TA1CCR0                                
+UNDEFED   TA1CCTL0                               
+UNDEFED   TA1CTL                                 
+UNDEFED   UCA0BRW_H                              
+UNDEFED   UCA0BRW_L                              
+UNDEFED   UCA0CTLW0_H                            
+UNDEFED   UCA0CTLW0_L                            
+UNDEFED   UCA0RXBUF                              
+UNDEFED   UCA0TXBUF                              
+UNDEFED   UCB1BRW_H                              
+UNDEFED   UCB1BRW_L                              
+UNDEFED   UCB1CTLW0_H                            
+UNDEFED   UCB1CTLW0_L                            
+UNDEFED   UCB1ICTL_H                             
+UNDEFED   UCB1RXBUF                              
+UNDEFED   UCB1STAT                               
+UNDEFED   UCB1TXBUF                              
+UNDEFED   UCSCTL1                                
+UNDEFED   UCSCTL2                                
+UNDEFED   UCSCTL3                                
+UNDEFED   WDTCTL                                 
+
+[78 symbols]
